@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "dbank_angela_yu_backend": {
+      "main": "src/dbank_angela_yu_backend/main.mo",
+      "type": "motoko"
+    },
+    "dbank_angela_yu_frontend": {
+      "dependencies": [
+        "dbank_angela_yu_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/dbank_angela_yu_frontend/src/index.html"
+      },
+      "source": [
+        "src/dbank_angela_yu_frontend/assets",
+        "dist/dbank_angela_yu_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.1",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
